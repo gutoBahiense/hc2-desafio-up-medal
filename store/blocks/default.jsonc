@@ -32,5 +32,17 @@
       "product-identifier.summary",
       "add-to-cart-button"
     ]
+  },
+
+  "product-summary.shelf#item2": {
+    "children": [
+      "product-summary-name",
+      "product-rating-inline",
+      "product-summary-image",
+      "product-summary-space",
+      "product-summary-price",
+      "product-summary-buy-button"
+    ]
   }
+
 }

@@ -26,16 +26,11 @@
     },
     "children": [
       "flex-layout.col#logo-desktop",
-      "flex-layout.col#spacer",
       "search-bar",
       "minicart.v2"
     ]
   },
-  "flex-layout.col#spacer": {
-    "props": {
-      "width": "grow"
-    }
-  },
+
   "flex-layout.col#logo-desktop": {
     "props": {
       "verticalAlign": "middle"
@@ -60,7 +55,6 @@
     "children": [
       "drawer",
       "logo",
-      "flex-layout.col#spacer",
       "minicart.v2"
     ],
     "props": {

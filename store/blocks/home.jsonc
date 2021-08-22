@@ -11,8 +11,26 @@
       "horizontaAlign": "center"  
     },
     "children":[
-      "flex-layout.col"
+      "tab-layout"
     ]
+  },
+
+
+  "tab-layout":{
+    "children":[
+      "sticky-layout#tabs","flex-layout.col"
+    ]
+  },
+
+  "sticky-layout#tabs":{
+    "children":["tab-list"],
+    "props":{
+      "position":"top"
+    }
+  },
+
+  "tab-list":{
+    "children":["tab-list.item#1","tab-list.item#2"]
   },
 
   "flex-layout.col":{
@@ -21,52 +39,8 @@
 
     },
     "children":[
-      "slider-layout#home",
-      "tab-layout"
+      "slider-layout#home","tab-content"
     ]
-  },
-  "slider-layout#home":{
-    "children":[
-      "image#guerreiros",
-      "image#wood"
-    ],
-    "props":{
-      "itemsPerPage": {
-        "desktop": 1,
-        "tablet": 1,
-        "phone": 1
-      },
-      "fullWidth":false,
-      "infinite": true,
-      "autoplay":{
-        "timeout":5000,
-        "stopOnHover":true
-      },
-      "showNavigationArrows":"always",
-      "showPaginationDots":"always",
-      "blockClass":"carrossel"
-
-    }
-  },
-  "image#guerreiros":{
-    "props":{
-      "src": "assets/banner-guerreiros.png"
-    }
-  },
-  "image#wood":{
-    "props":{
-      "src": "assets/BANNER-WOOD.png"
-    }
-  },
-
-  "tab-layout":{
-    "children":[
-      "tab-list","tab-content"
-    ]
-  },
-
-  "tab-list":{
-    "children":["tab-list.item#1","tab-list.item#2"]
   },
 
   "tab-content":{
@@ -94,13 +68,11 @@
       "tabId":"lista-1"
     }
   },
-  "image#wood2":{
-    "props":{
-      "src": "assets/BANNER-WOOD.png"
-    }
-  },
 
   "tab-content.item#2":{
+    "children":[
+      "list-context.product-list#item2"
+    ],
     "props":{
       "tabId":"lista-2"
     }
@@ -108,16 +80,36 @@
 
   "search-result-layout.customQuery":{
     "blocks":[
-      "search-result-layout.desktop"
+      "search-result-layout.desktop#home"
     ],
     "props":{
       "querySchema":{
         "hideUnavailableItems": true,
         "maxItensperPage": 6,
-        "queryField":"oven"
+        "queryField":"refrigerator"
       }
     }
+  },
+
+  "search-result-layout.desktop#home": {
+    "children": [
+      "search-fetch-previous",
+      "search-content",
+      "search-fetch-more"
+    ]
+  },
+  
+  "list-context.product-list#item2": {
+    "blocks": ["product-summary.shelf#item2"],
+    "children":["slider-layout"],
+    "props":{
+      "hideUnavailableItems":true,
+      "maxItems":4,
+      "category":"1/4"
+    }
   }
+  
+
 
   
 }
