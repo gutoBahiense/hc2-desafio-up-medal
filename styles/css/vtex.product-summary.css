@@ -7,6 +7,10 @@
     color: white;
 }
 
+.sellingPrice {
+    color: #59ff00;
+}
+
 .installmentContainer {
     display: none;
 }
