@@ -28,21 +28,33 @@
       "product-summary-name",
       "product-rating-inline",
       "product-summary-space",
-      "product-summary-price",
-      "product-identifier.summary",
+      "product-summary-price#home",
       "add-to-cart-button"
     ]
   },
-
+  "product-summary-price#home":{
+      "props":{
+        "showInstallments":false
+      }
+  },
   "product-summary.shelf#item2": {
     "children": [
       "product-summary-name",
       "product-rating-inline",
-      "product-summary-image",
+      "product-images#shelf",
       "product-summary-space",
+      "vtex.product-highlights@2.x:product-highlights",
       "product-summary-price",
       "product-summary-buy-button"
     ]
+  },
+
+  "product-images#shelf":{
+    "props":{
+      "showNavigationArrows":true,
+      "showPaginationDots":true
+    }
+
   }
 
 }

@@ -6,3 +6,20 @@
     flex-grow: 4;
     width: 900px;
 }
+
+.carouselGaleryThumbs {
+    display: none;
+}
+
+.carouselContainer {
+    justify-content: center;
+}
+
+.carouselGaleryCursor {
+    margin: 0;
+    justify-content: center;
+}
+
+.swiper-pagination-bullets {
+    bottom: 0;
+}

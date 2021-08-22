@@ -25,7 +25,8 @@
   "sticky-layout#tabs":{
     "children":["tab-list"],
     "props":{
-      "position":"top"
+      "position":"top",
+      "blockClass":"tabs"
     }
   },
 
@@ -84,6 +85,7 @@
     ],
     "props":{
       "querySchema":{
+        "skusFilter":"FIRST_AVAILABLE",
         "hideUnavailableItems": true,
         "maxItensperPage": 6,
         "queryField":"refrigerator"
@@ -96,7 +98,37 @@
       "search-fetch-previous",
       "search-content",
       "search-fetch-more"
-    ]
+    ],
+    "props":{
+      "preventRouteChange":true
+    }
+  },
+
+  "search-content":{
+    "blocks":["gallery#home", "not-found"]
+  },
+
+  "gallery#home":{
+    "props":{
+      "layouts":[ 
+        {
+        "name":"grid",
+        "component":"GridSummary",
+        "itemsPerRow":{
+          "desktop":2,
+          "tablet":2,
+          "phone":1
+        }
+      },
+      {
+        "name":"list",
+        "component":"ListSummary",
+        "itemsPerRow":1
+      }
+    ],
+    "ListSummary":"product-summary.shelf#item2",
+    "GridSummary":"product-summary.shelf#item2"
+    }
   },
   
   "list-context.product-list#item2": {
@@ -108,8 +140,5 @@
       "category":"1/4"
     }
   }
-  
-
-
   
 }
