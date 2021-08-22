@@ -1,0 +1,14 @@
+.sliderArrows--carrossel {
+    bottom: 0;
+    height: 10px;
+    margin: 0 10%;
+}
+
+.caretIcon--carrossel {
+    color: white;
+    height: 10px;
+}
+
+.sliderTrackContainer {
+    margin: 20px auto;
+}

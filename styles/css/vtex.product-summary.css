@@ -1,0 +1,12 @@
+.container {
+    background-color: #666;
+    margin: .3em;
+}
+
+.productBrand {
+    color: white;
+}
+
+.installmentContainer {
+    display: none;
+}

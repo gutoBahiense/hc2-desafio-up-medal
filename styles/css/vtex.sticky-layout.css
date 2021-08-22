@@ -1,0 +1,7 @@
+.container {
+    background-color: #212121;
+}
+
+.container--tabs {
+    z-index: 499;
+}
