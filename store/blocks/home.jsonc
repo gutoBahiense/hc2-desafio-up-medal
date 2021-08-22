@@ -1,15 +1,123 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text"
+      "flex-layout.row"
+      
     ]
   },
-  "rich-text": { 
+  "flex-layout.row": { 
     "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+      "fullWidth": true,
+      "horizontaAlign": "center"  
+    },
+    "children":[
+      "flex-layout.col"
+    ]
+  },
+
+  "flex-layout.col":{
+    "props":{
+      "blockClass":"container"
+
+    },
+    "children":[
+      "slider-layout#home",
+      "tab-layout"
+    ]
+  },
+  "slider-layout#home":{
+    "children":[
+      "image#guerreiros",
+      "image#wood"
+    ],
+    "props":{
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "fullWidth":false,
+      "infinite": true,
+      "autoplay":{
+        "timeout":5000,
+        "stopOnHover":true
+      },
+      "showNavigationArrows":"always",
+      "showPaginationDots":"always",
+      "blockClass":"carrossel"
+
+    }
+  },
+  "image#guerreiros":{
+    "props":{
+      "src": "assets/banner-guerreiros.png"
+    }
+  },
+  "image#wood":{
+    "props":{
+      "src": "assets/BANNER-WOOD.png"
+    }
+  },
+
+  "tab-layout":{
+    "children":[
+      "tab-list","tab-content"
+    ]
+  },
+
+  "tab-list":{
+    "children":["tab-list.item#1","tab-list.item#2"]
+  },
+
+  "tab-content":{
+    "children":["tab-content.item#1","tab-content.item#2"]
+  },
+  
+  "tab-list.item#1":{
+    "props":{
+      "tabId":"lista-1",
+      "label":"lista-1"
+    }
+  },
+  "tab-list.item#2":{
+    "props":{
+      "tabId":"lista-2",
+      "label":"lista-2"
+    }
+  },
+
+  "tab-content.item#1":{
+    "children":[
+      "search-result-layout.customQuery"
+    ],
+    "props":{
+      "tabId":"lista-1"
+    }
+  },
+  "image#wood2":{
+    "props":{
+      "src": "assets/BANNER-WOOD.png"
+    }
+  },
+
+  "tab-content.item#2":{
+    "props":{
+      "tabId":"lista-2"
+    }
+  },
+
+  "search-result-layout.customQuery":{
+    "blocks":[
+      "search-result-layout.desktop"
+    ],
+    "props":{
+      "querySchema":{
+        "hideUnavailableItems": true,
+        "maxItensperPage": 6,
+        "queryField":"oven"
+      }
     }
   }
+
+  
 }

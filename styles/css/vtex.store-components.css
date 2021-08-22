@@ -1,0 +1,13 @@
+.imageElement {
+    max-height: 350px;
+    border-radius: 30px
+}
+
+.sliderArrowsContainer {
+    width: 960px;
+    background-color: blue;
+}
+
+.flexCol--container {
+    max-width: 960px;
+}
